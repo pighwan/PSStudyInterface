@@ -17,8 +17,8 @@ public class MemoController {
 	@RequestMapping("/") // 시작
 	public ModelAndView list(ModelAndView mav) { // ModelAndView: 데이터와 페이지를 같이 감
 		List<MemoDTO> items = memoDao.list();
-		mav.setViewName("list"); // list.jsp로 가세요~
-		mav.addObject("list", items);
+		mav.setViewName("list"); // views/list.jsp로 가세요~
+		mav.addObject("list", items); //addObject(key, value)
 		return mav;
 	} // list
 	

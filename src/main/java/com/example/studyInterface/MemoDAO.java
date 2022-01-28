@@ -7,9 +7,10 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import org.springframework.stereotype.Repository;
 // import org.springframework.stereotype.Repository;
 
-// @Repository root.context에 <mybatis-spring:scan base-package="com.example.studyInterface" /> 요거 해줘서 굳이 안해도됨
+@Repository // @Repository root.context에 <mybatis-spring:scan base-package="com.example.studyInterface" /> 요거 해줘서 굳이 안해도됨
 public interface MemoDAO {
 	
 	@Select("select * from memo order by idx desc")
